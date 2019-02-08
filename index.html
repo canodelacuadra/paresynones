@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de pares y nones</title>
+    <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="pasopantallas.css">
+</head>
+
+<body>
+    <div class='container'>
+        <!--
+Vamos a hacer 5  pantallas,
+Pantalla 1 presentamos el juego
+Pantalla 2 Decimos al niño que elija pares nones
+Pantall 3 : lanzamos el juego
+Pantalla 4 :
+        informamos (lo que ha elegido el niño y lo que elige la maquina) 
+        resultados del juego (quien gana)
+        y volver a jugar (ir a pantalla 2) o abandonar juego
+Pantalla 5:
+Despedida
+
+-->
+        <!-- Inicio de la pantalla 1-->
+        <div id='pantalla1' class='pantalla'>
+            <h1 id='titulo'>Pares y Nones</h1>
+            <h2>Juega y diviértete</h2>
+            <button type ='button'id='entrar'> ¡¡¡Vamos a jugar!!!</button>
+        </div>
+        <!-- Inicio de la pantalla 2   : la niña elige pares o nones y un numero
+y pasamos a la pantalla 4, tras un breve espacio por la tres
+-->
+        <div id='pantalla2' class='pantalla'>
+                     <form>
+<div id='paresynones'>
+<h2> Elige pares o nones</h2>
+<button> Pares</button>
+<button> Nones</button>
+            </div>
+           
+ <div id='numeros'> 
+ <h2> Elige un número del 1 al 10</h2> 
+ <button> 1</button>
+ <button> 2</button>
+   <button> 3</button>
+ <button> 4</button>
+<button> 5</button>
+ <button>6</button>
+ <button> 7</button>
+ <button> 8</button>
+  <button> 9</button>
+ <button> 10</button>
+         </div>
+    <button  type='button' id='comjuego'> Juega contra la máquina</button>
+            </form>
+        </div>
+        <!-- Inicio de la pantalla 3-->
+        <div id='pantalla3' class='pantalla'>
+            <p> Estamos pensando</p>
+        
+        </div>
+        <!-- Inicio de la pantalla 4:   vemos los resultados del juego y definimos ganador
+            invitamos a jugar otra vez o nos vamos-->
+        <div id='pantalla4' class='pantalla'>
+          <p> Has elegido <span id='selectnino'>pares</span></p>
+            <p> La maquina ha elegido <span id='selectmaquina'>impares</span></p>
+            <p> Elegiste el número <span id='selectnumero'>5</span></p>
+            <p> La maquina ha elegido el numero <span id='selectmaquina'>6</span></p>
+            <p> 5 + 6 = 11 y 11 es impar</p>
+            <p> El vencedor es la máquina</p>
+            <button id='volver' type='button'> Quieres volver a jugar</button>
+            <button id='despedida'type='button'> Abandonar juego</button>
+        </div>
+        <!-- Inicio de la pantalla 5-->
+        <div id='pantalla5' class='pantalla'>
+        <h2> Gracias y hasta pronto</h2>
+        </div>
+    
+    
+    </div>
+    <script src="script.js"></script>
+<script src="pasopantallas.js"></script>
+    
+</body>
+</html>
