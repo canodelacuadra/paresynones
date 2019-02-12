@@ -25,13 +25,29 @@
 }
 button{
     font-size:1.5em;
-    background-color:red;
+    background-color:violet;
     color:white;
     padding:.2em;
+    border-radius: .5em;
 }
-#numeros input, #paresynones input{
-    display:none;
+
+input[type="radio"] {
+  display: none;
 }
+
+label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked+label {
+  background-color: #bbb;
+}
+
 
 
 
