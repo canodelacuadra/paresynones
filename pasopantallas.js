@@ -19,6 +19,11 @@ document.getElementById('pantalla4').style.display='none';
 document.getElementById('pantalla2').style.display='inline-block';
 }
 
+function pasopant2a4(){
+    
+}
+
+
 ////// Empiezan los manejadores de eventos///////
 
 // activamos un envento en el boton con id entrar para disparar la función pasopant2
@@ -32,6 +37,9 @@ document.getElementById('despedida').addEventListener('click',pasopant5);
 
 // activamos un envento en el boton con id volver para a la pantalla 2
 document.getElementById('volver').addEventListener('click',pasopant4a2);
+
+
+
 
 
 

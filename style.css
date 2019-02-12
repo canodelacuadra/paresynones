@@ -29,6 +29,10 @@ button{
     color:white;
     padding:.2em;
 }
+#numeros input, #paresynones input{
+    display:none;
+}
+
 
 
 
