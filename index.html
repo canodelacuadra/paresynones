@@ -36,24 +36,26 @@ y pasamos a la pantalla 4, tras un breve espacio por la tres
                      <form>
 <div id='paresynones'>
 <h2> Elige pares o nones</h2>
-<button> Pares</button>
-<button> Nones</button>
+<label> Pares <input type='radio' value='pares' name='paresnones'></label>
+    <label> Nones<input type='radio' value='impares' name='paresnones'></label>
+
             </div>
            
  <div id='numeros'> 
  <h2> Elige un número del 1 al 10</h2> 
- <button> 1</button>
- <button> 2</button>
-   <button> 3</button>
- <button> 4</button>
-<button> 5</button>
- <button>6</button>
- <button> 7</button>
- <button> 8</button>
-  <button> 9</button>
- <button> 10</button>
+ <label> 1<input type='radio' value='1' name='numeros'></label>
+     <label> 2<input type='radio' value='2' name='numeros'></label>
+     <label> 3<input type='radio' value='3' name='numeros'></label>
+     <label> 4<input type='radio' value='4' name='numeros'></label>
+     <label> 5<input type='radio' value='5' name='numeros'></label>
+     <label> 6<input type='radio' value='6' name='numeros'></label>
+     <label> 7<input type='radio' value='7' name='numeros'></label>
+     <label> 8<input type='radio' value='8' name='numeros'></label>
+     <label> 9<input type='radio' value='9' name='numeros'></label>
+     <label> 10<input type='radio' value='10' name='numeros'></label>
+ 
          </div>
-    <button  type='button' id='comjuego'> Juega contra la máquina</button>
+    <button onclick='jugar()' type='button' id='comjuego'> Juega contra la máquina</button>
             </form>
         </div>
         <!-- Inicio de la pantalla 3-->
@@ -64,12 +66,10 @@ y pasamos a la pantalla 4, tras un breve espacio por la tres
         <!-- Inicio de la pantalla 4:   vemos los resultados del juego y definimos ganador
             invitamos a jugar otra vez o nos vamos-->
         <div id='pantalla4' class='pantalla'>
-          <p> Has elegido <span id='selectnino'>pares</span></p>
-            <p> La maquina ha elegido <span id='selectmaquina'>impares</span></p>
-            <p> Elegiste el número <span id='selectnumero'>5</span></p>
-            <p> La maquina ha elegido el numero <span id='selectmaquina'>6</span></p>
-            <p> 5 + 6 = 11 y 11 es impar</p>
-            <p> El vencedor es la máquina</p>
+          <ul id='display'>
+            
+            
+            </ul>
             <button id='volver' type='button'> Quieres volver a jugar</button>
             <button id='despedida'type='button'> Abandonar juego</button>
         </div>
@@ -80,6 +80,9 @@ y pasamos a la pantalla 4, tras un breve espacio por la tres
     
     
     </div>
+     <script src="tomardatos.js"></script>
+
+         <script src="mostrarResultados.js"></script>
     <script src="script.js"></script>
 <script src="pasopantallas.js"></script>
     
