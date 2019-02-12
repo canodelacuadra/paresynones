@@ -1,12 +1,10 @@
 // esta función es el programa pares y nones
 function jugar(){
     var jugador,  maquina;
-// definimos jugador y maquina 
+// definimos jugador y maquina  como un array vacío que tendrá dos valores, el primero si es pares o nones y el segundo, el número del 1 al diez elegido 
     jugador =[];
     maquina =[];
-    // el jugador elige,//////////////////////////
-   // jugador[0] = 'impares';
-    
+    // el jugador elige,////////////////////////// 
     jugador[0] = saberSiParesNones();
    // jugador[0] = prompt('elige pares o impares');
     // maquina lo contrario de jugador
@@ -17,51 +15,38 @@ function jugar(){
         maquina[0]='pares';
     }
     
-        console.log(jugador[0]);
-        console.log(maquina[0]);
+   // asignamos a la variable resultados un string que mostrará los valores
     var resultados= '<li> has elegido ' + jugador[0]+'</li>';
 resultados+='<li> La maquina ha elegido ' + maquina[0]+'</li>';
     
-    //////// saca dedos jugador/////////////////
+    //////// saca dedos jugador//////////////// lo ponemos dentro de la función number para que se tome como un número ante la suma que tendrá en evaluar
     jugador[1]=Number(tomarnumeros());
-        //jugador[1]=5;
-       
-    console.log(jugador[1]);
-   // jugador[1]=Number(prompt('Elige un numero del 1 al 10'));
-    //saca dedos máquina
+    //saca dedos máquina// es un número aleatorio
     
     maquina[1]=Math.floor(Math.random()*11);
-    console.log(maquina[1]);
+   // seguimos poneiendo los resultados en la variable resultados
     resultados+='<li> Elegiste el número ' + jugador[1]+'</li>';
 resultados+='<li> La maquina ha elegido el número ' + maquina[1]+'</li>';
     
-    // evaluamos jugada
+    // evaluamos jugada sumando los resultdos y haciedno modulo de los mismos
     var evaluar = (jugador[1]+maquina[1])%2;
-    console.log('evaluar es igual a ' +evaluar);
-    // decidimos quien gana
-    if (evaluar===0){// si sales pares
-        if(jugador[0]==='pares'){
-                console.log('jugador gana');
-                console.log('maquina pierde');
-            resultados+='<li> El jugador gana, la máquina pierde</li>';
-            }else{
-               console.log('jugador pierde');
-                console.log('maquina gana'); 
-                resultados+='<li> El jugador pierde, la máquina gana</li>';
-            }
-         }
-     if (evaluar===1){// si sales impares
-        if(jugador[0]==='pares'){
-                console.log('jugador pierde');
-                console.log('maquina gana'); 
-            resultados+='<li> El jugador pierde, la máquina gana</li>';
-            }else{
-               console.log('jugador gana');
-                console.log('pierde maquina'); 
-                resultados+='<li> El jugador gana, la máquina pierde</li>';
-            }
-         }
    
+    // decidimos quien gana dependiendo de la variable evaluar
+    if (evaluar===0){// si sale pares, es decir que módulo 0
+        if(jugador[0]==='pares'){
+            resultados+='<li> Has ganado</li>';
+            }else{
+                resultados+='<li> Has perdido</li>';
+            }
+         }
+     if (evaluar===1){// si sales impares es decir si el resultado del modulo es 1
+        if(jugador[0]==='pares'){ 
+            resultados+='<li>Has perdido</li>';
+            }else{ 
+                resultados+='<li> Has ganado</li>';
+            }
+         }
+ // mostramos en display la variable resultados en la que hemos ido acumulando los resultados  
 document.getElementById('display').innerHTML=resultados;
    
 }

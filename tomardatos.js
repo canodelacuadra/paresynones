@@ -1,4 +1,4 @@
-
+// tomamos los valores de los dos primeros botones que son input tipo radio disfrazados
 function  saberSiParesNones(){
     
 var paresonones = document.getElementsByName('paresnones');
