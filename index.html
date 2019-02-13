@@ -10,6 +10,16 @@
 
 <body>
     <div class='container'>
+        <div id ='marcador'>
+           <div> 
+               <div > Jugador</div>
+            <div id='puntjug'> Puntos jugador</div></div>
+            
+          <div> 
+              <div > Máquina</div>
+        <div id='puntmaq'> Puntos jugador</div>
+            </div>
+        </div>
         <!--
 Vamos a hacer 5  pantallas,
 Pantalla 1 presentamos el juego
@@ -68,6 +78,7 @@ y pasamos a la pantalla 4, tras un breve espacio por la tres
     
  
          </div>
+                         
     <button onclick='jugar()' type='button' id='comjuego'> Juega contra la máquina</button>
             </form>
         </div>
@@ -83,18 +94,27 @@ y pasamos a la pantalla 4, tras un breve espacio por la tres
             
             
             </ul>
-            <button id='volver' type='button'> Volver a jugar</button>
+            <button id='volver' type='button'> ¿Otra partida?</button>
             <button id='despedida'type='button'> Abandonar juego</button>
         </div>
         <!-- Inicio de la pantalla 5-->
         <div id='pantalla5' class='pantalla'>
         <h2> Gracias y hasta pronto</h2>
+             <div id='capitanoff'></div>
+            
         </div>
+       
         <p class='copy'>&copy; José Antonio Cano 2019</p>
-        <audio id='efecto' src='boom.mp3'></audio>
+        <audio id='boom' src='ohhh.mp3'></audio>
+        <audio id='toc' src='misc224.mp3'></audio>
+        <audio id='boton' src='iphone-notificacion.mp3'></audio>
+        <audio id='aplausos' src='bravo-engine-starting.mp3'></audio>
+        <audio id='hola' src='homero-hola.mp3'></audio>
+        <audio id='adios' src='adios-adios.mp3'></audio>
     
     
     </div>
+        <script src="puntuacion.js"></script>
      <script src="tomardatos.js"></script>
     <script src="script.js"></script>
 <script src="pasopantallas.js"></script>

@@ -4,4 +4,8 @@
 #pantalla1{
     display:inline-block;
 }
+#numeros,#comjuego{
+    display:none; 
+}
+
 

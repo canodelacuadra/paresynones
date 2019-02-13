@@ -1,6 +1,9 @@
-// esta función es el programa pares y nones
+
+
+/// esta función es el programa pares y nones///////
 function jugar(){
     var jugador,  maquina;
+   
 // definimos jugador y maquina  como un array vacío que tendrá dos valores, el primero si es pares o nones y el segundo, el número del 1 al diez elegido 
     jugador =[];
     maquina =[];
@@ -35,15 +38,26 @@ resultados+='<li> La maquina ha elegido el número ' + maquina[1]+'</li>';
     if (evaluar===0){// si sale pares, es decir que módulo 0
         if(jugador[0]==='pares'){
             resultados+='<li> Has ganado</li>';
+         document.getElementById('puntjug').innerHTML=puntjug();
+             document.getElementById('aplausos').play();
+            
             }else{
                 resultados+='<li> Has perdido</li>';
+             document.getElementById('puntmaq').innerHTML=puntmaq();
+                document.getElementById('boom').play();
             }
          }
      if (evaluar===1){// si sales impares es decir si el resultado del modulo es 1
         if(jugador[0]==='pares'){ 
             resultados+='<li>Has perdido</li>';
+            
+        document.getElementById('puntmaq').innerHTML=puntmaq(); 
+            document.getElementById('boom').play();
             }else{ 
                 resultados+='<li> Has ganado</li>';
+             document.getElementById('puntjug').innerHTML=puntjug(); 
+                 document.getElementById('aplausos').play();
+                
             }
          }
  // mostramos en display la variable resultados en la que hemos ido acumulando los resultados  

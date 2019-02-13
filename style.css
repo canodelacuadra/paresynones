@@ -18,7 +18,7 @@ body{
     width:900px;
     height: 600px;
  
-    margin:1em;
+    margin-top:.2em;
     text-align:center;
     font-size: 3em;
     vertical-align: center;
@@ -38,6 +38,9 @@ body{
     background-position: bottom right, top center;
     background-repeat: no-repeat,no-repeat;
 }
+#pantalla5 h2{
+    margin-top: 2em;
+}
 button{
      font-family: monospace;
     font-size:1em;
@@ -48,6 +51,9 @@ button{
     transition-duration: 0.4s;
     margin-top:1em;
     padding:.5em;
+}
+#pantalla2 button{
+    margin:12px auto;
 }
 ul{
     list-style: none;
@@ -71,6 +77,7 @@ label {
 input[type="radio"]:checked+label {
   background-color: #bbb;
 }
+
 .copy{
     color:whitesmoke;
 }
@@ -100,6 +107,48 @@ input[type="radio"]:checked+label {
         
     }
 }
+#capitanoff{
+    
+    background-image: url('capitan.png');
+    background-size: contain;
+    position:absolute;
+    width:200px;
+    height: 200px;
+    bottom:0;
+    left:300px;
+    animation-name: anicapitanoff;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes anicapitanoff{
+    from{
+        
+      bottom:0;
+    left:300px;  
+    } to{
+        bottom:0;
+    left:-300px;
+        
+    }
+}
+
+#marcador{
+    margin-top:.5em;
+      display: flex;
+    justify-content:  space-around;
+    color:#333;
+    
+}
+#marcador div{
+  background-color: whitesmoke;
+    margin: 0 .2em;
+    text-align:center;
+    border-bottom:solid 3px tomato;
+    font-size:1.2em;
+}
+
 
 
 
